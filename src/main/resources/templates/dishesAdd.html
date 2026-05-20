@@ -14,8 +14,9 @@
 	<table border="1">
 		
 		<tr>
-			<th>主菜</th>
-			<td><select>
+			<th>主食</th>
+			<td>
+				<select name="stapleFood" required>
 					<option>--選択してください--</option>
 					<option th:each="i : ${#numbers.sequence(0,10)}" th:value="${i}" th:text="${i}+'つ(SV)'"></option>
 				</select>
@@ -34,7 +35,7 @@
 		
 		
 		<tr>
-			<th>主食</th>
+			<th>主菜</th>
 			<td><select>
 					<option>--選択してください--</option>
 					<option th:each="i : ${#numbers.sequence(0,10)}" th:value="${i}" th:text="${i}+'つ(SV)'"></option>

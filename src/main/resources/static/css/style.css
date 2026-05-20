@@ -22,7 +22,7 @@ header h1 {
 }
 /* 仕切り線 */
 hr {
-	border-top: 2px dashed #7d8bae;
+	border-top: 2px dashed rgb(128, 128, 128);
 }
 /* メイン */
 main {
@@ -33,7 +33,7 @@ main {
 /* 表線 */
 table, th, td {
 	border-collapse: collapse;
-	border: 1px solid #7d8bae;
+	border: 1px solid rgb(128, 128, 128);
 }
 /* 表 */
 table {
@@ -42,14 +42,14 @@ table {
 }
 /* 表見出しセル */
 table th {
-	background: #7d8bae;
+	background: rgb(128, 128, 128);
 	color: #ffffff;
 }
 /* 送信ボタン */
 button {
 	margin: 2px;
 	padding: 5px 20px;
-	background-color: #e5857b;
+	background-color: rgb(252, 104, 41);
 	color: #ffffff;
 	border: none;
 	width:150px;
@@ -57,5 +57,5 @@ button {
 }
 /* 送信ボタン(マウスオーバー時) */
 button:hover {
-	background-color: #f1b2b2;
+	background-color: rgb(235, 153, 85);
 }

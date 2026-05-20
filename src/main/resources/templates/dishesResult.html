@@ -8,11 +8,14 @@
 </head>
 
 <body>
-	<h1>登録内容一覧</h1>
+	<header>
+		<h1>登録内容一覧</h1>
+	</header>
 
 	<table border="1">
 
 		<tr>
+			<th>日付</th>
 			<th>主菜</th>
 			<th>副菜</th>
 			<th>主食</th>
@@ -20,17 +23,26 @@
 			<th>果物</th>
 			<th>メモ</th>
 			<th>採点</th>
-			<th>更新</th>			
+			<th>更新</th>
+		</tr>
+		<tr th:each="record:${resultList}">
+			<td th:text ="${record.stapleFood}"></td>
+			<td th:text ="${record.sideDish}"></td>
+			<td th:text ="${record.mainDish}"></td>
+			<td th:text ="${record.milkDish}"></td>
+			<td th:text ="${record.fruitcount}"></td>
+			<td th:text ="${record.detaiMemo}"></td>
+			<td th:text ="${record.achivment}"></td>
+			
 		</tr>
 
 		
-		
 	</table>
-	
-	
-	
 
-	<a href="/dishes/add">新規内容登録</a>
+
+
+
+	<a href="/dishes">新規内容登録</a>
 	<a href="/logout">ログアウト<a>
 
 

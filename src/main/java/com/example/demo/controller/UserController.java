@@ -3,6 +3,8 @@ package com.example.demo.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import jakarta.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,10 +16,11 @@ import com.example.demo.repository.UserRepository;
 
 @Controller
 public class UserController {
-
+	private final HttpSession session;
 	private final UserRepository userRepository;
 
-	public UserController(UserRepository userRepository) {
+	public UserController(HttpSession session, UserRepository userRepository) {
+		this.session = session;
 		this.userRepository = userRepository;
 	}
 
@@ -57,7 +60,7 @@ public class UserController {
 		}
 		model.addAttribute("email", email);
 		model.addAttribute("password", password);
-
+		session.setAttribute("userId", userList.get(0).getUserId());
 		return "redirect:/dishes/result";
 
 	}
