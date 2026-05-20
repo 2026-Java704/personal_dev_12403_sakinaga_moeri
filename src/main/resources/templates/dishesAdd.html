@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+<header>
+	<h1>新規登録画面</h1>
+</header>
+	<table border="1">
+		
+		<tr>
+			<th>主菜</th>
+			<td><select>
+					<option>--選択してください--</option>
+					<option th:each="i : ${#numbers.sequence(0,10)}" th:value="${i}" th:text="${i}+'つ(SV)'"></option>
+				</select>
+			</td>
+		</tr>
+
+		
+		<tr>
+			<th>副菜</th>
+			<td><select>
+					<option>--選択してください--</option>
+					<option th:each="i : ${#numbers.sequence(0,10)}" th:value="${i}" th:text="${i}+'つ(SV)'"></option>
+				</select>
+			</td>
+		</tr>
+		
+		
+		<tr>
+			<th>主食</th>
+			<td><select>
+					<option>--選択してください--</option>
+					<option th:each="i : ${#numbers.sequence(0,10)}" th:value="${i}" th:text="${i}+'つ(SV)'"></option>
+				</select>
+			</td>
+		</tr>
+		
+		
+		<tr>
+			<th>乳製品</th>
+			<td><select>
+					<option>--選択してください--</option>
+					<option th:each="i : ${#numbers.sequence(0,10)}" th:value="${i}" th:text="${i}+'つ(SV)'"></option>
+				</select>
+			</td>
+		</tr>
+		
+		
+		<tr>
+			<th>果物</th>
+			<td><select>
+					<option>--選択してください--</option>
+					<option th:each="i : ${#numbers.sequence(0,10)}" th:value="${i}" th:text="${i}+'つ(SV)'"></option>
+				</select>
+			</td>
+		</tr>
+
+	</table>
+	<a href="/dishes/note">
+		<button>詳細登録</button></a>
+	
+	<a href="/dishes/result">
+	<button>登録</button></a>
+</body>
+
+</html>

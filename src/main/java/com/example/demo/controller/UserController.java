@@ -34,17 +34,31 @@ public class UserController {
 			@RequestParam String email,
 			@RequestParam String password,
 			Model model) {
-		// 名前が空の場合にエラーとする
-		if (email.length() == 0 || password.length() == 0) {
-			model.addAttribute("message", "入力してください");
+
+		List<User> userList = userRepository.findByEmailAndPassword(email, password);
+
+		if ((email == null || email.length() == 0) && (password == null || password.length() == 0)) {
+			model.addAttribute("message", "メールアドレスを入力してください");
+			model.addAttribute("message1", "パスワードを入力してください");
 			return "login";
-		}
 
-		List<User> customerList = userRepository.findByEmailAndPassword(email, password);
-		if (customerList == null || customerList.size() == 0)
+		} else if (email == null || email.length() == 0) {
+			model.addAttribute("message", "メールアドレスを入力してください");
+			return "login";
+
+		} else if (password == null || password.length() == 0) {
+			model.addAttribute("message", "パスワードを入力してください");
+			return "login";
+
+		} else if (userList == null || userList.size() == 0) {
 			model.addAttribute("message;", "メールアドレスとパスワードが一致しませんでした");
+			return "login";
 
-		return "login";
+		}
+		model.addAttribute("email", email);
+		model.addAttribute("password", password);
+
+		return "redirect:/dishes/result";
 
 	}
 

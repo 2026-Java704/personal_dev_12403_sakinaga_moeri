@@ -3,24 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <title>ユーザー登録</title>
+<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+	<header>
 <h1>新規登録</h1>
-
+	</header>
 <form action="/users/add" method="post">
 	
 	<ul th:if="${errorList}" class="error">
 			<li th:each="error:${errorList}" th:text="${error}" ></li>
 		</ul>
 	
-<input type="text" name="name" placeholder="名前" th:value="${name}"><br>
-<input type="text" name="email" placeholder="メールアドレス" th:value="${email}"><br>
-<input type="password" name="password" placeholder="パスワード" th:value="${password}"><br>
-<input type="number" name="age" placeholder="年齢" th:value="${age}"><br>
-<select name="gender">
+名前：<input type="text" name="name" placeholder="名前" th:value="${name}"><br>
+メールアドレス：<input type="text" name="email" placeholder="メールアドレス" th:value="${email}"><br>
+パスワード：<input type="password" name="password" placeholder="パスワード" th:value="${password}"><br>
+年齢：<input type="number" name="age" placeholder="年齢" th:value="${age}"><br>
+性別：<select name="gender">
 	<option value="1">男</option>
 	<option value="2">女</option>
 </select><br>
+
 <button>登録</button>
 
 </form>
