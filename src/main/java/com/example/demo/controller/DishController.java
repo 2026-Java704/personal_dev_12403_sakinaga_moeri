@@ -147,7 +147,7 @@ public class DishController {
 	@PostMapping("/dishes/{id}/edit")
 	public String update(
 			@PathVariable Integer id,
-			@RequestParam(defaultValue = "") LocalDate recodeDate,
+			@RequestParam(defaultValue = "") LocalDate recordDate,
 			@RequestParam(defaultValue = "") Integer stapleFood,
 			@RequestParam(defaultValue = "") Integer sideDish,
 			@RequestParam(defaultValue = "") Integer mainDish,
@@ -156,9 +156,8 @@ public class DishController {
 			@RequestParam(defaultValue = "") String detailMemo) {
 		Result result = resultRepository.findById(id).get();
 		Integer userId = (Integer) session.getAttribute("userId");
-
 		result.setUserId(userId);
-		result.setRecordDate(LocalDate.now());
+		result.setRecordDate(recordDate);
 		result.setStapleFood(stapleFood);
 		result.setSideDish(sideDish);
 		result.setMainDish(mainDish);
@@ -173,9 +172,7 @@ public class DishController {
 				fruitCount);
 		result.setAchievement(achievement);
 		resultRepository.save(result);
-
 		return "redirect:/dishes/result";
-
 	}
 
 	private int sumAchievement(Integer stapleFood, Integer sideDish, Integer mainDish, Integer milkDish,
