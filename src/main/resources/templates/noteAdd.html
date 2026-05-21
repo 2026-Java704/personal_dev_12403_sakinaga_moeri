@@ -6,13 +6,19 @@
 <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-	
+	<header>
 	<h3>詳細登録</h3>
-
-	<input type="text"><br>
+	</header>
+	<form action="/dishes/add" method="post">
+		<input type="hidden" name="stapleFood" th:value="${stapleFood}">
+		<input type="hidden" name="sideDish" th:value="${sideDish}">
+		<input type="hidden" name="mainDish" th:value="${mainDish}">
+		<input type="hidden" name="milkDish" th:value="${milkDish}">
+		<input type="hidden" name="fruitCount" th:value="${fruitCount}">
 	
-	<a href="/dishes/add">
-		<button>登録</button></a>
-
+	<textarea name="detailMemo"	placeholder="詳細"></textarea><br>
+	
+		<button type="submit">登録</button>
+</form>
 </body>
 </html>

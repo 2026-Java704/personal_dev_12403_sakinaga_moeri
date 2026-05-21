@@ -26,24 +26,28 @@
 			<th>更新</th>
 		</tr>
 		<tr th:each="record:${resultList}">
-			<td th:text ="${record.stapleFood}"></td>
-			<td th:text ="${record.sideDish}"></td>
-			<td th:text ="${record.mainDish}"></td>
-			<td th:text ="${record.milkDish}"></td>
-			<td th:text ="${record.fruitcount}"></td>
-			<td th:text ="${record.detaiMemo}"></td>
-			<td th:text ="${record.achivment}"></td>
-			
+			<td th:text="${record.recordDate}"></td>
+			<td th:text="${record.stapleFood}"></td>
+			<td th:text="${record.sideDish}"></td>
+			<td th:text="${record.mainDish}"></td>
+			<td th:text="${record.milkDish}"></td>
+			<td th:text="${record.fruitCount}"></td>
+			<td th:text="${record.detailMemo}"></td>
+			<td th:text="${record.achievement}"></td>
+
+			<td>
+				<form th:action="@{/dishes/{id}/edit(id=${record.id})}" method="get">
+					<button type="submit">更新</button>
+				</form>
+			</td>
+
 		</tr>
 
-		
 	</table>
-
-
-
-
-	<a href="/dishes">新規内容登録</a>
-	<a href="/logout">ログアウト<a>
+	<form action="/dishes/add" method="get">
+		<button>登録画面へ</button><br>
+	</form>
+	<a href="/logout"><button>ログアウト</button></a>
 
 
 </body>
