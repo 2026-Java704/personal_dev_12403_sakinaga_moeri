@@ -8,25 +8,34 @@
 </head>
 
 <body>
-	<header>
-		<h1>ログイン画面</h1>
-	</header>
-	<span th:text="${message}" style="color: red"></span>
-	<span th:text="${message1}" style="color: red"></span>
-
-	<form action="/login" method="post">
-
-		<input type="text" name="email" placeholder="メールアドレス" th:value="${email}"><br>
-		<input type="text" name="password" placeholder="パスワード" th:value="${password}"><br>
-		<a href="/dishes/result">
-			<button>ログイン</button>
-		</a>
-
-	</form>
-	<a href="/users/add">新規会員登録はこちら</a>
+	<header th:replace="~{header}"></header>
+	<div class="login">
+		<h2>ログイン画面</h2>
 
 
+		<form action="/login" method="post">
 
+			<div class="form-group">
+				<label for="email" class="form-label">メールアドレス</label>
+				<input type="text" name="email" class="form-control" placeholder="your@email.com" th:value="${email}" required>
+			</div>
+
+			<div class="form-group">
+				<label for="password" class="form-label">パスワード</label>
+				<input type="text" name="password" class="form-control" placeholder="パスワードを入力" th:value="${password}" required>
+			</div>
+
+			<a href="/dishes/result">
+				<button class="btn-login">ログイン</button>
+			</a>
+			<div class="forgot-password">
+				<a href="/users/add">新規会員登録はこちら</a>
+			</div>
+		</form>
+
+	</div>
+
+	<footer th:replace="~{footer}"></footer>
 </body>
 
 </html>

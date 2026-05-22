@@ -8,9 +8,10 @@
 </head>
 
 <body>
-	<header>
+	<header th:replace="~{header}"></header>
+	
 		<h1>登録内容一覧</h1>
-	</header>
+	
 
 	<table border="1">
 
@@ -71,7 +72,7 @@
 		<button>登録画面へ</button><br>
 	</form>
 	<a href="/logout"><button>ログアウト</button></a>
-
+	<footer th:replace="~{footer}"></footer>
 
 </body>
 

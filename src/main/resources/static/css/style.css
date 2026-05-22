@@ -1,61 +1,470 @@
 /* 全体 */
 body {
-	background-color: #EFF0F7; /* 背景色  */
-	text-align: center; /* 中央寄せ */
-    min-width: 900px; /* 最小幅 */
+	background-color: rgb(255, 255, 255);
+	/* 背景色  */
+	/*	text-align: center;  中央寄せ */
+	min-width: 900px;
+	/* 最小幅 */
 }
+
 /* ヘッダー、ナビゲーションメニュー、フッター */
-header, nav, footer {
-	background-color: #45496a; /* 背景色 */
-	color: #ffffff; /* 文字色 */
-	padding-top: 5px; /* 内側余白(上) */
-	padding-bottom: 5px; /* 内側余白(下) */
+header,
+nav,
+footer {
+	/*	background-color: #45496a;  背景色 */
+	color: rgb(0, 64, 128);
+	/* 文字色 */
+	padding-top: 5px;
+	/* 内側余白(上) */
+	padding-bottom: 5px;
+	/* 内側余白(下) */
 }
+
 /* ヘッダー、ナビゲーション内リンク */
-header a, nav a {
+header a,
+nav a {
 	color: #ffffff;
 }
+
 /* ヘッダー内見出し */
-header h1 {
-	font-size: 20pt;
-	margin: 10px auto;
+header {
+
+	font-family: WebLTGothicFont;
+	border: none;
+	position: relative;
+	padding: .5em 1em;
+	background-image: repeating-linear-gradient(-45deg, rgb(208, 236, 208, .5), rgb(208, 236, 208, .5) 10px, transparent 0, transparent 20px),
+		repeating-linear-gradient(45deg, rgb(208, 236, 208, .5), rgb(208, 236, 208, .5) 10px, transparent 0, transparent 20px);
+	/*チェックの色*/
+	border-left: 3px dotted rgba(0, 0, 0, 0.1);
+	border-right: 3px dotted rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
+
+header .inner {
+	position: relative;
+	padding: 10px 30px;
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+/* .logo */
+
+header .logo {
+	position: relative;
+	width: 100px;
+	margin: 0;
+	padding: 0;
+}
+
+header .logo a {
+	font-weight: bold;
+	text-decoration: none;
+	color: #757575;
+}
+
+
+
+footer {
+	font-family: WebLTGothicFont;
+	border: none;
+	position: relative;
+	padding: .5em 1em;
+	background-color: rgb(168, 219, 168, .5);
+	/*背景色*/
+	box-shadow: 0 0 0 7px rgb(168, 219, 168, .5);
+	/*背景色*/
+	/*	  border: 2px dashed #fff;線の太さ、種類、色*/
+	border-left: 3px dotted rgba(0, 0, 0, 0.1);
+	border-right: 3px dotted rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+footer .inner {
+	position: relative;
+	padding: 10px 30px;
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+/* .logo */
+
+footer .logo {
+	position: relative;
+	width: 100px;
+	margin: 0;
+	padding: 0;
+}
+
+footer .logo a {
+	font-weight: bold;
+	text-decoration: none;
+	color: #757575;
+}
+
+/*header h1 {*/
+/*	font-size: 20pt;*/
+/*	margin: 10px auto;*/
+/*}*/
+
+
 /* 仕切り線 */
 hr {
 	border-top: 2px dashed rgb(128, 128, 128);
 }
+
 /* メイン */
 main {
 	background-color: #FFFFFF;
 	min-height: 50px;
 	padding: 20px;
 }
+
 /* 表線 */
-table, th, td {
+table,
+th,
+td {
 	border-collapse: collapse;
 	border: 1px solid rgb(128, 128, 128);
 }
+
 /* 表 */
 table {
-    margin: 5px auto;
-    min-width: 800px;
+	margin: 5px auto;
+	min-width: 800px;
 }
+
 /* 表見出しセル */
 table th {
 	background: rgb(128, 128, 128);
 	color: #ffffff;
 }
+
 /* 送信ボタン */
 button {
 	margin: 2px;
 	padding: 5px 20px;
-	background-color: rgb(252, 104, 41);
+	background-color: #79BD9A;
 	color: #ffffff;
 	border: none;
-	width:150px;
+	width: 150px;
 	cursor: pointer;
 }
+
 /* 送信ボタン(マウスオーバー時) */
 button:hover {
 	background-color: rgb(235, 153, 85);
+
 }
+
+
+
+
+
+.login {
+
+	max-width: 400px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 2rem;
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.login h2 {
+
+	border-bottom: 3px dotted #79BD9A;
+	padding-bottom: 4px;
+	text-align: center;
+	margin-bottom: 2rem;
+	color: #333;
+	font-weight: 600;
+}
+
+.login .form-group {
+	margin-bottom: 1.5rem;
+}
+
+.login .form-label {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+	color: #555;
+}
+
+.login .form-control {
+	width: 100%;
+	padding: 12px 16px;
+	border: 2px solid #e1e5e9;
+	border-radius: 8px;
+	font-size: 16px;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+
+.login .form-control:focus {
+	outline: none;
+	border-color: #A8DBA8;
+	box-shadow: 0 0 0 3px #A8DBA8;
+}
+
+.login .btn-login {
+	width: 100%;
+	padding: 12px;
+	background: linear-gradient(#79BD9A, #79BD9A);
+	color: white;
+	border: none;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login .btn-login:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 25px #A8DBA8;
+}
+
+.login .form-check {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1.5rem;
+}
+
+.login .form-check-input {
+	margin-right: 0.5rem;
+}
+
+.login .form-check-label {
+	font-size: 14px;
+	color: #666;
+}
+
+.login .forgot-password {
+	text-align: center;
+	margin-top: 1rem;
+}
+
+.login .forgot-password a {
+	color: #79BD9A;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.login .forgot-password a:hover {
+	text-decoration: underline;
+
+}
+
+
+
+
+
+.user {
+	max-width: 400px;
+	margin: 0 auto;
+	margin-top: 120px;
+	padding: 2rem;
+	background: #fff;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 12px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.user h2 {
+
+	border-bottom: 3px dotted #79BD9A;
+	padding-bottom: 4px;
+	text-align: center;
+	margin-bottom: 2rem;
+	color: #333;
+	font-weight: 600;
+}
+
+.user .form-group {
+	margin-bottom: 1.5rem;
+}
+
+.user .form-label {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+	color: #555;
+}
+
+.user .form-control {
+	width: 100%;
+	padding: 12px 16px;
+	border: 2px solid #e1e5e9;
+	border-radius: 8px;
+	font-size: 16px;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+
+.user .form-control:focus {
+	outline: none;
+	border-color: #79BD9A;
+	box-shadow: 0 0 0 3px #79BD9A;
+}
+
+.user .btn-login {
+	width: 100%;
+	padding: 12px;
+	background: linear-gradient(#79BD9A, #79BD9A);
+	color: white;
+	border: none;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.user .btn-login:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 25px #A8DBA8;
+}
+
+.user .form-check {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1.5rem;
+}
+
+.user .form-check-input {
+	margin-right: 0.5rem;
+}
+
+.user .form-check-label {
+	font-size: 14px;
+	color: #666;
+}
+
+.user .forgot-password {
+	text-align: center;
+	margin-top: 1rem;
+}
+
+.user .forgot-password a {
+	color: #79BD9A;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.user .forgot-password a:hover {
+	text-decoration: underline;
+
+}
+
+
+/*更新画面*/
+.add {
+
+	max-width: 700px ;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 2rem;
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.add h2 {
+
+	border-bottom: 3px dotted #79BD9A;
+	padding-bottom: 4px;
+	text-align: center;
+	margin-bottom: 2rem;
+	color: #333;
+	font-weight: 600;
+}
+
+.add .form-group {
+	margin-bottom: 1.5rem;
+}
+
+.add .form-label {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+	color: #555;
+}
+
+.add .form-control {
+	width: 100%;
+	padding: 12px 16px;
+	border: 2px solid #e1e5e9;
+	border-radius: 8px;
+	font-size: 16px;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+
+.add .form-control:focus {
+	outline: none;
+	border-color: #A8DBA8;
+	box-shadow: 0 0 0 3px #A8DBA8;
+}
+
+.add .btn-login {
+	width: 100%;
+	padding: 12px;
+	background: linear-gradient(#79BD9A, #79BD9A);
+	color: white;
+	border: none;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add .btn-login:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 25px #A8DBA8;
+}
+
+.add .form-check {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1.5rem;
+}
+
+.add .form-check-input {
+	margin-right: 0.5rem;
+}
+
+.add .form-check-label {
+	font-size: 14px;
+	color: #666;
+}
+
+.add .forgot-password {
+	text-align: center;
+	margin-top: 1rem;
+}
+
+.add .forgot-password a {
+	color: #79BD9A;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.add .forgot-password a:hover {
+	text-decoration: underline;
+
+}
+
+
