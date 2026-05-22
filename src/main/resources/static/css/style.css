@@ -1,6 +1,6 @@
 /* 全体 */
 body {
-	background-color: rgb(255, 255, 255);
+	background-color: rgb(176, 223, 176);
 	/* 背景色  */
 	/*	text-align: center;  中央寄せ */
 	min-width: 900px;
@@ -29,16 +29,11 @@ nav a {
 /* ヘッダー内見出し */
 header {
 
-	font-family: WebLTGothicFont;
-	border: none;
-	position: relative;
-	padding: .5em 1em;
-	background-image: repeating-linear-gradient(-45deg, rgb(208, 236, 208, .5), rgb(208, 236, 208, .5) 10px, transparent 0, transparent 20px),
-		repeating-linear-gradient(45deg, rgb(208, 236, 208, .5), rgb(208, 236, 208, .5) 10px, transparent 0, transparent 20px);
-	/*チェックの色*/
-	border-left: 3px dotted rgba(0, 0, 0, 0.1);
-	border-right: 3px dotted rgba(0, 0, 0, 0.1);
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	
+	  padding: 1rem 2rem;
+	  border-top: 3px dotted rgb(255, 255, 255);
+	  border-bottom: 3px dotted rgb(255, 255, 255);
+	
 }
 
 header .inner {
@@ -71,10 +66,10 @@ footer {
 	border: none;
 	position: relative;
 	padding: .5em 1em;
-	background-color: rgb(168, 219, 168, .5);
 	/*背景色*/
-	box-shadow: 0 0 0 7px rgb(168, 219, 168, .5);
-	/*背景色*/
+	background-image: repeating-linear-gradient(-45deg, rgb(255, 255, 255,.5), rgb(255, 255, 255,.5) 10px, transparent 0, transparent 20px),
+		repeating-linear-gradient(45deg, rgb(255, 255, 255,.5), rgb(255, 255, 255,.5) 10px, transparent 0, transparent 20px);
+	
 	/*	  border: 2px dashed #fff;線の太さ、種類、色*/
 	border-left: 3px dotted rgba(0, 0, 0, 0.1);
 	border-right: 3px dotted rgba(0, 0, 0, 0.1);
@@ -114,6 +109,10 @@ footer .logo a {
 /* 仕切り線 */
 hr {
 	border-top: 2px dashed rgb(128, 128, 128);
+}
+
+.memo{
+	white-space: pre-wrap;
 }
 
 /* メイン */
@@ -173,7 +172,7 @@ button:hover {
 	padding: 2rem;
 	background: #fff;
 	border-radius: 12px;
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 10px 30px rgb(0, 34, 68,0.3);
 }
 
 .login h2 {
