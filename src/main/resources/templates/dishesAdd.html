@@ -4,75 +4,90 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
-	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/style2.css">
 </head>
 
 <body>
 	<header th:replace="~{header}"></header>
 	<div class="add">
 		<h2>何食べた？</h2>
-	
 
-	<main>
-		<form action="/dishes/add" method="post">
-			<ul th:if="${errorList}" class="error">
-						<li th:each="error:${errorList}" th:text="${error}"></li>
-					</ul>
-		
+
+		<main>
+			<form action="/dishes/add" method="post">
+				<ul th:if="${errorList}" class="error">
+					<li th:each="error:${errorList}" th:text="${error}"></li>
+				</ul>
+
+				<a href="#image1" class="color">食事バランスガイド表</a>
+
+				<!-- 表示される画像（最初は隠れている） -->
+				<div id="image1" class="popup-image">
+					<a href="#">
+						<img src="https://www.maff.go.jp/j/balance_guide/img/kihon_syoku.jpg" alt="拡大画像" >
+					</a>
+				</div>
+
 
 				<div class="form-group">
 					<label for="stpleFood" class="form-label">主食</label>
-						<select name="stapleFood" class="form-control" required>
-							<option value="" disabled selected>--選択してください--</option>
-							<option th:each="i : ${#numbers.sequence(0,10)}" th:value="${i}" th:text="${i}+'つ(SV)'">
-							</option>
-						</select>
-				
-						
+					<select name="stapleFood" class="form-control" required>
+						<option value="" disabled selected>--選択してください--</option>
+						<option th:each="i : ${#numbers.sequence(0,10)}" th:value="${i}" th:text="${i}+'つ(SV)'">
+						</option>
+					</select>
+
+
 					<label for="sideDish" class="form-label">副菜</label>
-						<select name="sideDish" class="form-control" required>
-							<option value="" disabled selected>--選択してください--</option>
-							<option th:each="i : ${#numbers.sequence(0,10)}" th:value="${i}" th:text="${i}+'つ(SV)'">
-							</option>
-						</select>
-				
+					<select name="sideDish" class="form-control" required>
+						<option value="" disabled selected>--選択してください--</option>
+						<option th:each="i : ${#numbers.sequence(0,10)}" th:value="${i}" th:text="${i}+'つ(SV)'">
+						</option>
+					</select>
 
 
-				
+
+
 					<label for="mainDish" class="form-label">主菜</label>
-						<select name="mainDish" class="form-control" required>
-							<option value="" disabled selected>--選択してください--</option>
-							<option th:each="i : ${#numbers.sequence(0,10)}" th:value="${i}" th:text="${i}+'つ(SV)'">
-							</option>
-						</select>
-					
+					<select name="mainDish" class="form-control" required>
+						<option value="" disabled selected>--選択してください--</option>
+						<option th:each="i : ${#numbers.sequence(0,10)}" th:value="${i}" th:text="${i}+'つ(SV)'">
+						</option>
+					</select>
 
 
-				
+
+
 					<label for="milkDish" class="form-label">乳・乳製品</label>
-						<select name="milkDish" class="form-control" required>
-						<option value=""disabled selected>--選択してください--</option>
-							<option th:each="i : ${#numbers.sequence(0,10)}" th:value="${i}" th:text="${i}+'つ(SV)'">
-							</option></select>
-				
+					<select name="milkDish" class="form-control" required>
+						<option value="" disabled selected>--選択してください--</option>
+						<option th:each="i : ${#numbers.sequence(0,10)}" th:value="${i}" th:text="${i}+'つ(SV)'">
+						</option>
+					</select>
 
-				
+
+
 					<label for="fruitCount" class="form-label">果物</label>
-						<select name="fruitCount" class="form-control" required>
-						<option value=""disabled selected>--選択してください--</option>
-							<option th:each="i : ${#numbers.sequence(0,10)}" th:value="${i}" th:text="${i}+'つ(SV)'">
-							</option>
-						</select>
-					
+					<select name="fruitCount" class="form-control" required>
+						<option value="" disabled selected>--選択してください--</option>
+						<option th:each="i : ${#numbers.sequence(0,10)}" th:value="${i}" th:text="${i}+'つ(SV)'">
+						</option>
+					</select>
+
 
 				</div>
 				<button formmethod="get" formaction="/dishes/note" class="btn-login">メモ登録</button>
-			<button type="submit" class="btn-login">登録</button>
-		
-		</form>
-		</div>
+				<button type="submit" class="btn-login">登録</button>
+				<div class="forgot-password">
+					<a href="/dishes/result">記録画面に戻る</a>
+				</div>
+			</form>
+
+	</div>
+
 	</main>
 	<footer th:replace="~{footer}"></footer>
+
 </body>
 
 </html>

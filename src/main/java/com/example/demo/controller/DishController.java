@@ -269,4 +269,11 @@ public class DishController {
 		return achievment;
 	}
 
+	@PostMapping("/dishes/{id}/delete")
+	public String delete(@PathVariable Integer id) {
+
+		resultRepository.deleteById(id);
+
+		return "redirect:/dishes/result";
+	}
 }

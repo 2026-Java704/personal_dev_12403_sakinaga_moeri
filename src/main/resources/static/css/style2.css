@@ -1,0 +1,441 @@
+/* 全体 */
+body {
+	background-color: rgb(252, 255, 219);
+	color: rgb(0, 0, 0);
+	/* 背景色  */
+	/*	text-align: center;  中央寄せ */
+	min-width: 1000px;
+	/* 最小幅 */
+}
+
+h2{
+	margin-left: 25px;
+	margin-top: 20px;
+	margin-bottom: -15px;
+	color: rgb(0, 64, 128);
+}
+
+
+/* ヘッダー内見出し */
+header {
+
+    
+	background-color: rgb(87, 177, 78);
+	padding: 20px 28px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+}
+
+header h1 {
+
+	color: white;
+}
+
+
+/* .logo */
+
+.logo h1 {
+	margin: 0;
+	margin-bottom: -9px;
+	color: rgb(255, 255, 255);
+}
+
+
+.logo p {
+
+	margin-top: 5px;
+	color: rgb(255, 255, 255);
+	font-size: 14px;
+}
+
+.logo a {
+	margin-right: auto; /* これでボタンを右端に押し出す */
+	color: rgb(255, 255, 255);
+		
+		font-size: 14px;
+	}
+	
+
+
+/*footer {*/
+/*	position: fixed;*/
+/*	bottom: 0;*/
+/*	width: 100%;*/
+/*	height: 50px;*/
+/*	background-color: rgb(87, 177, 78);*/
+/*	display: flex;*/
+/*	justify-content: space-around;*/
+/*	align-items: center;*/
+/*	box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);*/
+
+/*}*/
+
+
+
+
+
+/* .logo */
+
+/*footer .logo {*/
+/*	position: relative;*/
+/*	width: 100px;*/
+/*	margin: 0;*/
+/*	padding: 0;*/
+/*}*/
+
+/*footer .logo a {*/
+/*	font-weight: bold;*/
+/*	text-decoration: none;*/
+/*	color: #757575;*/
+/*}*/
+
+
+
+仕切り線 hr {
+	border-top: 2px dashed rgb(128, 128, 128);
+}
+
+.memo {
+	white-space: pre-wrap;
+}
+
+/* メイン */
+main {
+	background-color: #FFFFFF;
+	min-height: 50px;
+	padding: 20px;
+}
+
+
+
+/* 送信ボタン */
+button {
+	margin: 2px;
+	padding: 5px 20px;
+	background-color: rgb(87, 177, 78);
+	color: #ffffff;
+	border: none;
+	width: 150px;
+	cursor: pointer;
+}
+
+/* 送信ボタン(マウスオーバー時) */
+button:hover {
+	background-color: rgb(235, 153, 85);
+
+}
+
+
+.login {
+
+	max-width: 400px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 2rem;
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 10px 30px rgb(0, 34, 68, 0.3);
+}
+
+.login h2 {
+
+	border-bottom: 3px dotted rgb(255, 128, 0);
+	padding-bottom: 4px;
+	text-align: center;
+	margin-bottom: 2rem;
+	color: #333;
+	font-weight: 600;
+}
+
+.login .form-group {
+	margin-bottom: 1.5rem;
+}
+
+.login .form-label {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+	color: #555;
+}
+
+/*フォームサイズ*/
+.login .form-control {
+	width: 100%;
+	padding: 12px 16px;
+	border: 2px solid #e1e5e9;
+	border-radius: 8px;
+	font-size: 16px;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+
+.login .form-control:focus {
+	outline: none;
+	border-color: rgb(255, 177, 100);
+	box-shadow: 0 0 0 3px rgb(255, 177, 100);
+}
+
+.login .btn-login {
+	width: 100%;
+	padding: 12px;
+	background: linear-gradient(rgb(87, 177, 78), rgb(87, 177, 78));
+	color: white;
+	border: none;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login .btn-login:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 25px #A8DBA8;
+}
+
+
+.login .form-check-label {
+	font-size: 14px;
+	color: #666;
+}
+
+.login .forgot-password {
+	text-align: center;
+	margin-top: 1rem;
+}
+
+.login .forgot-password a {
+	color: rgb(255, 128, 0);
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.login .forgot-password a:hover {
+	text-decoration: underline;
+
+}
+
+
+
+
+
+.user {
+	max-width: 400px;
+	margin: 0 auto;
+	margin-top: 120px;
+	padding: 2rem;
+	background: #fff;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 12px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.user h2 {
+
+	border-bottom: 3px dotted rgb(255, 128, 64);
+	padding-bottom: 4px;
+	text-align: center;
+	margin-bottom: 2rem;
+	color: #333;
+	font-weight: 600;
+}
+
+.user .form-group {
+	margin-bottom: 1.5rem;
+}
+
+.user .form-label {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+	color: #555;
+}
+
+.user .form-control {
+	width: 100%;
+	padding: 12px 16px;
+	border: 2px solid #e1e5e9;
+	border-radius: 8px;
+	font-size: 16px;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+
+.user .form-control:focus {
+	outline: none;
+	border-color: rgb(255, 177, 100);
+	box-shadow: 0 0 0 3px rgb(255, 177, 100);
+}
+
+.user .btn-login {
+	width: 100%;
+	padding: 12px;
+	background: linear-gradient(rgb(87, 177, 78), rgb(87, 177, 78));
+	color: white;
+	border: none;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.user .btn-login:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 25px #A8DBA8;
+}
+
+
+
+.user .form-check-label {
+	font-size: 14px;
+	color: #666;
+}
+
+.user .forgot-password {
+	text-align: center;
+	margin-top: 1rem;
+}
+
+.user .forgot-password a {
+	color: rgb(255, 128, 64);
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.user .forgot-password a:hover {
+	text-decoration: underline;
+
+}
+
+
+/*更新画面*/
+.add {
+
+	max-width: 700px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 2rem;
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.add h2 {
+
+	border-bottom: 3px dotted rgb(255, 128, 0);
+	padding-bottom: 4px;
+	text-align: center;
+	margin-bottom: 2rem;
+	color: rgb(0, 64, 128);
+	font-weight: 600;
+}
+
+.add .form-group {
+	margin-bottom: 1.5rem;
+}
+
+.add .form-label {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+	color: #555;
+}
+
+.add .form-control {
+	width: 100%;
+	padding: 12px 16px;
+	border: 2px solid #e1e5e9;
+	border-radius: 8px;
+	font-size: 16px;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+
+.balance-area{
+  display: flex;
+ justify-content: space-between;
+   gap: 30px;
+   margin-bottom: 50px;
+
+}
+
+.add .form-control:focus {
+	outline: none;
+	border-color: rgb(255, 177, 100);
+	box-shadow: 0 0 0 3px rgb(255, 177, 100);
+}
+
+.add .btn-login {
+	width: 100%;
+	padding: 12px;
+	background: linear-gradient(rgb(87, 177, 78), rgb(87, 177, 78));
+	color: white;
+	border: none;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add .btn-login:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 25px #A8DBA8;
+}
+
+.add .form-check {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1.5rem;
+}
+
+.add .form-check-input {
+	margin-right: 0.5rem;
+}
+
+.add .form-check-label {
+	font-size: 14px;
+	color: #666;
+}
+
+.add .forgot-password {
+	text-align: center;
+	margin-top: 1rem;
+}
+
+.add .forgot-password a {
+	color: rgb(255, 128, 0);
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.add .forgot-password a:hover {
+	text-decoration: underline;
+
+}
+
+
+.popup-image {
+   display: none;
+   
+ }
+ /* リンクをクリックしたときに画像を表示する */
+ .popup-image:target {
+   display: block;
+ }
+
+.color{
+ color: rgb(255, 128, 0);
+ 	text-decoration: none;
+ 	font-size: 14px;
+}
