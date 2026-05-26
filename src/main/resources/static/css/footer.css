@@ -1,0 +1,22 @@
+
+
+footer {
+	margin-top: 40px;
+	 font-family: WebLTGothicFont;
+	    border: none;
+	    position: relative;
+	    padding: .5em 1em;
+	    background-image: repeating-linear-gradient(-45deg,rgb(101, 207, 82,.5), rgb(101, 207, 82,.5) 10px, transparent 0, transparent 20px), repeating-linear-gradient(45deg,rgb(101, 207, 82,.5), rgb(101, 207, 82,.5) 10px, transparent 0, transparent 20px);
+	    border-left: 3px dotted rgba(0,0,0,0.1);
+	    border-right: 3px dotted rgba(0,0,0,0.1);
+	    box-shadow : 0 0 5px rgba(0,0,0,0.2);
+	}
+	
+small {
+	font-size: 14px;
+	
+	align-items: center;
+	/* 上下中央に揃える */
+	box-sizing: border-box;
+	color: rgb(0, 64, 128);
+	}
