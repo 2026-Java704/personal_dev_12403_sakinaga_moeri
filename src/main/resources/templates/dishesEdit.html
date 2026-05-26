@@ -12,24 +12,24 @@
 
 	<form th:action="@{/dishes/{id}/edit(id=${result.id})}" method="post">
 
-		<div class="title-box">
+		<div class="title-area">
 			登録内容を変更する
 
 		</div>
-		
-		<div class="balance">
-		<img src="https://www.maff.go.jp/j/balance_guide/img/kihon_syoku.jpg" alt="拡大画像" >
-						</div>	
-						
+
+
+		<img src="https://www.maff.go.jp/j/balance_guide/img/kihon_syoku.jpg" alt="拡大画像">
+		<div class="eiyo"> </div>
+
 		<div class="container">
 
-		
+
 			<th>登録ID</th>
 			<td th:text="${result.id}"></td>
 
 			<div class="date-area">
 				<label>日付</label>
-				<input  class="form-control"  type="date" name="recordDate" th:value="${result.recordDate}">
+				<input class="form-control" type="date" name="recordDate" th:value="${result.recordDate}">
 			</div>
 
 			<div class="balance-grid">
@@ -96,15 +96,31 @@
 			<div class="memo-area">
 
 				<label>メモ</label>
-				<textarea class="form-control" name="detailMemo" placeholder="詳細" th:text="${result.detailMemo}"></textarea>
+				<textarea class="form-control" name="detailMemo" placeholder="詳細"
+					th:text="${result.detailMemo}"></textarea>
 			</div>
+			<button type="submit" class="btn-login">更新</button>
 		</div>
 
 
 
-		<button type="submit" class="btn-login">更新</button>
+
 	</form>
 	<footer th:replace="~{footer}"></footer>
+
+	<div class="memoran">
+		<h3>主食</h3>
+		<p>炭水化物の供給源であるごはん、パン、麺、パスタなどを主材料とする料理が含まれます。</p>
+		<h3>副菜</h3>
+		<p>ビタミン、ミネラル、食物繊維の供給源である野菜、いも、豆類（大豆を除く）、きのこ、海藻などを主材料とする料理が含まれます。</p>
+		<h3>主菜</h3>
+		<p>たんぱく質の供給源である肉、魚、卵、大豆および大豆製品などを主材料とする料理が含まれます。</p>
+		<h3>乳・乳製品</h3>
+		<p>カルシウムの供給源である、牛乳、ヨーグルト、チーズなどが含まれます。</p>
+		<h3>果物</h3>
+		<p>ビタミンC、カリウムなどの供給源である、りんご、みかんなどの果実及びすいか、いちごなどの果実的な野菜が含まれます。</p>
+	</div>
 </body>
+
 
 </html>

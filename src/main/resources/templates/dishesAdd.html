@@ -9,25 +9,22 @@
 
 <body>
 	<header th:replace="~{header}"></header>
+	
+	<div class="title-box">
+	食事内容を記録
+	</div>
+	<img src="https://www.maff.go.jp/j/balance_guide/img/kihon_syoku.jpg" alt="拡大画像" >
+							<div class="balance"> </div>
 	<div class="add">
-		<h2>何食べた？</h2>
-
-
+		
 		<main>
 			<form action="/dishes/add" method="post">
 				<ul th:if="${errorList}" class="error">
 					<li th:each="error:${errorList}" th:text="${error}"></li>
 				</ul>
 
-				<a href="#image1" class="color">食事バランスガイド表</a>
-
-				<!-- 表示される画像（最初は隠れている） -->
-				<div id="image1" class="popup-image">
-					<a href="#">
-						<img src="https://www.maff.go.jp/j/balance_guide/img/kihon_syoku.jpg" alt="拡大画像" >
-					</a>
-				</div>
-
+				
+						
 
 				<div class="form-group">
 					<label for="stpleFood" class="form-label">主食</label>
@@ -86,6 +83,19 @@
 	</div>
 
 	</main>
+	
+	<div class="shosai">
+			<h3>主食</h3>
+			<p>炭水化物の供給源であるごはん、パン、麺、パスタなどを主材料とする料理が含まれます。</p>
+			<h3>副菜</h3>
+			<p>ビタミン、ミネラル、食物繊維の供給源である野菜、いも、豆類（大豆を除く）、きのこ、海藻などを主材料とする料理が含まれます。</p>
+			<h3>主菜</h3>
+			<p>たんぱく質の供給源である肉、魚、卵、大豆および大豆製品などを主材料とする料理が含まれます。</p>
+			<h3>乳・乳製品</h3>
+			<p>カルシウムの供給源である、牛乳、ヨーグルト、チーズなどが含まれます。</p>
+			<h3>果物</h3>
+			<p>ビタミンC、カリウムなどの供給源である、りんご、みかんなどの果実及びすいか、いちごなどの果実的な野菜が含まれます。</p>
+		</div>
 	<footer th:replace="~{footer}"></footer>
 
 </body>
