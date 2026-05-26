@@ -27,7 +27,7 @@
 						
 
 				<div class="form-group">
-					<label for="stpleFood" class="form-label">主食</label>
+					<label for="stpleFood" class="form-label">🍚主食</label>
 					<select name="stapleFood" class="form-control" required>
 						<option value="" disabled selected>--選択してください--</option>
 						<option th:each="i : ${#numbers.sequence(0,10)}" th:value="${i}" th:text="${i}+'つ(SV)'">
@@ -35,7 +35,7 @@
 					</select>
 
 
-					<label for="sideDish" class="form-label">副菜</label>
+					<label for="sideDish" class="form-label">🥬副菜</label>
 					<select name="sideDish" class="form-control" required>
 						<option value="" disabled selected>--選択してください--</option>
 						<option th:each="i : ${#numbers.sequence(0,10)}" th:value="${i}" th:text="${i}+'つ(SV)'">
@@ -45,7 +45,7 @@
 
 
 
-					<label for="mainDish" class="form-label">主菜</label>
+					<label for="mainDish" class="form-label">🍖主菜</label>
 					<select name="mainDish" class="form-control" required>
 						<option value="" disabled selected>--選択してください--</option>
 						<option th:each="i : ${#numbers.sequence(0,10)}" th:value="${i}" th:text="${i}+'つ(SV)'">
@@ -55,7 +55,7 @@
 
 
 
-					<label for="milkDish" class="form-label">乳・乳製品</label>
+					<label for="milkDish" class="form-label">🥛乳・乳製品</label>
 					<select name="milkDish" class="form-control" required>
 						<option value="" disabled selected>--選択してください--</option>
 						<option th:each="i : ${#numbers.sequence(0,10)}" th:value="${i}" th:text="${i}+'つ(SV)'">
@@ -64,7 +64,7 @@
 
 
 
-					<label for="fruitCount" class="form-label">果物</label>
+					<label for="fruitCount" class="form-label">🍎果物</label>
 					<select name="fruitCount" class="form-control" required>
 						<option value="" disabled selected>--選択してください--</option>
 						<option th:each="i : ${#numbers.sequence(0,10)}" th:value="${i}" th:text="${i}+'つ(SV)'">

@@ -40,9 +40,8 @@ public class DishController {
 
 		resultRepository.findByRecordDate(recordDate);
 
-		if (recordDate == null) {
-			resultList = resultRepository.findAll();
-		} else {
+		if (recordDate != null) {
+
 			resultList = resultRepository.findByRecordDate(recordDate);
 		}
 		model.addAttribute("resultList", resultList);
