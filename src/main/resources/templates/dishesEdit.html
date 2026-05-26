@@ -100,14 +100,16 @@
 					th:text="${result.detailMemo}"></textarea>
 			</div>
 			<button type="submit" class="btn-login">更新</button>
+			<div class="forgot-password">
+				<a href="/dishes/result">記録一覧画面に戻る</a>
+			</div>
 		</div>
 
 
 
 
 	</form>
-	<footer th:replace="~{footer}"></footer>
-
+	
 	<div class="memoran">
 		<h3>主食</h3>
 		<p>炭水化物の供給源であるごはん、パン、麺、パスタなどを主材料とする料理が含まれます。</p>
@@ -120,7 +122,9 @@
 		<h3>果物</h3>
 		<p>ビタミンC、カリウムなどの供給源である、りんご、みかんなどの果実及びすいか、いちごなどの果実的な野菜が含まれます。</p>
 	</div>
+
 </body>
+<footer th:replace="~{footer}"></footer>
 
 
 </html>

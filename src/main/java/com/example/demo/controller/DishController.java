@@ -31,10 +31,20 @@ public class DishController {
 
 	//	一覧画面
 	@GetMapping("/dishes/result")
-	public String index(Model model) {
+	public String index(@RequestParam(defaultValue = "") LocalDate recordDate,
+			Model model) {
+
 		Integer userId = (Integer) session.getAttribute("userId");
 		List<Result> resultList = resultRepository.findByUserId(userId);
 		//		List<Result> resultList = resultRepository.findAll();
+
+		resultRepository.findByRecordDate(recordDate);
+
+		if (recordDate == null) {
+			resultList = resultRepository.findAll();
+		} else {
+			resultList = resultRepository.findByRecordDate(recordDate);
+		}
 		model.addAttribute("resultList", resultList);
 		return "dishesResult";
 	}
@@ -146,6 +156,15 @@ public class DishController {
 
 	}
 
+	@GetMapping("/dishes/search")
+	public String search(
+			@RequestParam LocalDate recordDate,
+			Model model) {
+
+		return "dishesresult";
+
+	}
+
 	@PostMapping("/dishes/{id}/edit")
 	public String update(
 			@PathVariable Integer id,
@@ -174,6 +193,15 @@ public class DishController {
 				fruitCount);
 		result.setAchievement(achievement);
 		resultRepository.save(result);
+		return "redirect:/dishes/result";
+	}
+
+	//	削除
+	@PostMapping("/dishes/{id}/delete")
+	public String delete(@PathVariable Integer id) {
+
+		resultRepository.deleteById(id);
+
 		return "redirect:/dishes/result";
 	}
 

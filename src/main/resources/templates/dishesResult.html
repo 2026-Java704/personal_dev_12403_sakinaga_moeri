@@ -9,11 +9,20 @@
 
 <body>
 	<header th:replace="~{header}"></header>
-	<h2>📖登録内容一覧</h2>
+<!--	<h2>📖登録内容一覧</h2>-->
 
+<div class="date-box">
+	<form action="/dishes/result" method="get">
+			<input type="date" name="recordDate">
+			
+			<button class="btn-add">検索</button>
+		</form>
+</div>
+		
 	<div class="table-area">
 		
-		<table  class="record-table">
+
+		<table class="record-table">
 			<thead>
 				<tr>
 					<th>日付</th>
@@ -25,11 +34,11 @@
 					<th>メモ</th>
 					<th>採点</th>
 					<th>更新</th>
-<!--					<th>削除</th>-->
+					<th>削除</th>
 				</tr>
-				</thead>
+			</thead>
 
-<tbody>
+			<tbody>
 				<tr th:each="record:${resultList}">
 					<td th:text="${record.recordDate}"></td>
 					<td>
@@ -61,28 +70,31 @@
 
 
 					<td th:text="${record.detailMemo}" class="memo"></td>
-					<td th:text="${record.achievement}" ></td>
-					
+					<td th:text="${record.achievement}"></td>
+
 					 <td>
 						<form th:action="@{/dishes/{id}/edit(id=${record.id})}" method="get">
 							<button type="submit" class="edit-btn">✎</button>
 						</form>
 					</td>
-<!--					<td>-->
-<!--						<form th:action="@{/dishes/{id}/delete(id=${record.id})}" method="post">-->
-<!--							<button type="submit" class="edit-btn">×</button>-->
-<!--						</form>-->
-<!--					</td>-->
+					<td>
+						<form th:action="@{/dishes/{id}/delete(id=${record.id})}" method="post">
+							<button type="submit" class="edit-btn">×</button>
+						</form>
+					</td>
 
 				</tr>
-				</tbody>
+			</tbody>
 		</table>
-		 </div>
-		
-		<form action="/dishes/add" method="get">
-							<button class="btn-login">登録画面へ</buttonclass="btn-login">
-		</form>
-		
+		 
+	</div>
+
+	<form action="/dishes/add" method="get">
+		<button class="btn-login">登録画面へ</button>
+	</form>
+
 </body>
+
+<footer th:replace="~{footer}"></footer>
 
 </html>
